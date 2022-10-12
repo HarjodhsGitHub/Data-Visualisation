@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 500,
+  "width": 500,
+  "title": "Country vs Year",
+  "data": {
+    "url": "https://raw.githubusercontent.com/harj2002/Week10HW/main/data/countryratesvsyear.csv"
+  },
+  "transform": [{"filter": "datum.country == 'United Kingdom'"}],
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "temporal"
+    },
+    "y": {
+      "field": "Suicide mortality rate (per 100,000 population)",
+      "type": "quantitative",
+      "axis": {"tickCount": 10},
+      "scale": {"type": "log", "domain": [7.5, 9]}
+    },
+    "tooltip": [
+      {"field": "Suicide mortality rate (per 100,000 population)", "type": "quantitative"}
+    ]
+  }
+}
