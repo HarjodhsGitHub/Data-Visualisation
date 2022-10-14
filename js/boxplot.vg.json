@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "description": "A horizontal box plot showing median, min, and max body mass of penguins.",
+  "data": {"url": "https://raw.githubusercontent.com/harj2002/Week10HW/main/data/countryratesvsyear.csv"},
+  "mark": {"type": "boxplot", "extent": "min-max"},
+  "encoding": {
+    "y": {"field": "country", "type": "nominal"},
+    "x": {
+      "field": "Suicide mortality rate (per 100,000 population)",
+      "type": "quantitative",
+      "scale": {"zero": false}
+    }
+  }
+}

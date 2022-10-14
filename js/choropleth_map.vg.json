@@ -6,7 +6,7 @@
   "layer": [
     {
       "data": {
-      "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+      "url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/ne_110m_admin_0_countries.json",
       "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
       "transform": [
@@ -15,7 +15,7 @@
       "mark": {
         "type": "geoshape",
         "fill": "#ddd",
-        "stroke": "white",
+        "stroke": "black",
         "strokeWidth": 1
       },
       "encoding": {"tooltip": {"field": "note"}}
@@ -35,14 +35,24 @@
         "key": "CountryName",
         "fields": ["SuicideRate_2000"]
         }
-        }
+        },
+      {"calculate": "datum.SuicideRate_2000", "as": "Suicide Rate Per 100,000"}
       ],
       "mark": {"type": "geoshape"},
       "encoding": {
         "color": {
-          "field": "SuicideRate_2000",
+          "field": "Suicide Rate Per 100,000",
           "type": "quantitative",
-          "scale": {"type": "linear"}
+          "scale": {"type": "threshold",
+          "domain": [10,20,30,40,50],
+          "range": [
+            "#fef0d9",
+            "#fdd49e",
+            "#fdbb84",
+            "#fc8d59",
+            "#e34a33",
+            "#b30000"
+          ]}
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},

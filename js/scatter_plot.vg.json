@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",  
+  "width": 800,
+  "height": 600,
   "title": "Suicide vs GDP",
   "data": {
     "url": "https://raw.githubusercontent.com/harj2002/Week10HW/main/data/Dataset_withcontinents.csv"
@@ -12,6 +13,36 @@
     "bind": "legend"
     }
   },
+  "params": [
+    {
+    "name": "Continent_selection",
+    "bind": {
+        "input": "select",
+        "options": [
+        null,
+        "North America",
+        "South America",
+          "Europe",
+        "Africa",
+        "Asia",
+        "Oceania"
+        ],
+        "labels":[
+        "Show All",
+        "North America",
+        "South America",
+        "Europe",
+        "Africa",
+        "Asia",
+        "Oceania"
+        ],
+        "name": "Continent Selection: "
+        }
+    }
+  ],
+  "transform": [
+    {"filter": "Continent_selection == null || datum.Continent == Continent_selection"}
+  ],
   "mark": "circle",
   "encoding": {
     "x": {
@@ -32,13 +63,31 @@
       "field": "Continent",
       "type": "nominal",
       "range": [
-        "#e41a1c",
-        "#984ea3",
-        "#ff7f00",
-        "#a6cee3",
-        "#377eb8",
-        "#a65628"
-      ],
+          "#e41a1c",
+          "#377eb8",
+          "#4daf4a",
+          "#984ea3",
+          "#ff7f00",
+          "#ffff33"
+        ],
+      "scale": {
+        "domain": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+          ],
+          "range": [
+          "#e41a1c",
+          "#377eb8",
+          "#4daf4a",
+          "#984ea3",
+          "#ff7f00",
+          "#ffff33"
+        ]
+      },
       "opacity": {"value": 0.6}
     },
     "opacity": {
