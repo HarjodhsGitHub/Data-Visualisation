@@ -4,7 +4,7 @@
   "height": 600,
   "title": "Suicide vs GDP",
   "data": {
-    "url": "https://raw.githubusercontent.com/harj2002/Week10HW/main/data/Dataset_withcontinents.csv"
+    "url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/Dataset_withcontinents.csv"
   },
   "selection": {
     "continent_highlight": {

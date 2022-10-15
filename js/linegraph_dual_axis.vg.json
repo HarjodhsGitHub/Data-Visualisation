@@ -4,7 +4,7 @@
   "height": 500,
   "width": 500,
   "data": {
-    "url": "https://raw.githubusercontent.com/harj2002/Week10HW/main/data/countryratesvsyear.csv"
+    "url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/countryratesvsyear.csv"
   },
   "params": [
     {
@@ -22,7 +22,7 @@
           "Australia",
           "Kiribati",
           "Japan",
-          "China",
+          "Sri Lanka",
           "Zimbabwe",
           "Rwanda"
         ],
@@ -37,7 +37,7 @@
           "Australia",
           "Kiribati",
           "Japan",
-          "China",
+          "Sri Lanka",
           "Zimbabwe",
           "Rwanda"
         ],
