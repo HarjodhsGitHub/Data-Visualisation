@@ -1,4 +1,3 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": 500,
@@ -9,10 +8,10 @@
   "params": [
     {
       "name": "Country_selection",
+      "value": "Australia",
       "bind": {
         "input": "select",
         "options": [
-          null,
           "United Kingdom",
           "Ukraine",
           "United States",
@@ -27,7 +26,6 @@
           "Rwanda"
         ],
         "labels": [
-          "Not Selected",
           "United Kingdom",
           "Ukraine",
           "United States",
@@ -45,43 +43,36 @@
       }
     }
   ],
-  "transform": [{"filter": "datum.country == Country_selection"}],
-  "encoding": {
+  "repeat": {
+    "layer": [
+      "Suicide mortality rate (per 100,000 population)",
+      "GDP per capita, PPP (current international $)"
+    ]
+  },
+  "spec": {
+    "transform": [
+      {
+        "filter": "datum.country == Country_selection || Country_selection == null"
+      }
+    ],
+    "mark": "line",
+    "encoding": {
       "x": {
         "field": "year",
         "title": "Year",
-        "type": "temporal"
-      }
-    },
-  "layer": [{
-    "mark": "line",
-    "encoding": {
-      "y": {
-        "title": "Suicide mortality rate (per 100,000 population)",
-        "field": "Suicide mortality rate (per 100,000 population)",
-        "type": "quantitative",
-        "title": "Suicide mortality rate (per 100,000 population)"
+        "type": "temporal",
+        "timeUnit": "year"
       },
-      "tooltip": [
-        {"field": "Suicide mortality rate (per 100,000 population)", "type": "quantitative"}
-      ]
-      }
-    },
-    {"mark": "line",
-    "encoding": {
-      "y": {
-        "title": "GDP per capita, PPP (current international $)",
-        "type": "quantitative",
-        "field": "GDP per capita, PPP (current international $)",
-        "colour": {
-          "type": "quantitative",
-          "field": "GDP per capita, PPP (current international $)"
+      "color": {
+        "condition": {
+          "test": "Country_selection != null",
+          "datum": {"repeat": "layer"},
+          "type": "nominal"
         }
       },
-      "tooltip": [
-        {"field": "GDP per capita, PPP (current international $)", "type": "quantitative"}
-      ]
+      "y": {"field": {"repeat": "layer"}, "type": "quantitative"},
+      "tooltip": [{"field": {"repeat": "layer"}, "type": "quantitative"}]
     }
-  }],
+  },
   "resolve": {"scale": {"y": "independent"}}
 }

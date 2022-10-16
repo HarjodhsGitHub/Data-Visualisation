@@ -4,7 +4,7 @@
   "height": 600,
   "title": "Suicide vs GDP",
   "data": {
-    "url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/Dataset_withcontinents.csv"
+    "url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/pivoted_ratevsgdp_withcontinents.csv"
   },
   "selection": {
     "continent_highlight": {
@@ -38,22 +38,34 @@
         ],
         "name": "Continent Selection: "
         }
+    },
+    {
+      "name": "Year_selection",
+      "value": 2005,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2020,
+        "step": 5,
+        "name": "Year: "
+      }
     }
   ],
   "transform": [
-    {"filter": "Continent_selection == null || datum.Continent == Continent_selection"}
+    {"filter": "Continent_selection == null || datum.Continent == Continent_selection"},
+  {"filter": "datum.Year == Year_selection"}
   ],
   "mark": "circle",
   "encoding": {
     "x": {
-      "field": "GDP_PerCapita_2000 US$",
+      "field": "GDP_PerCapita",
       "type": "quantitative",
       "title": "GDP Per Capita",
       "axis": {"tickCount": 10},
-      "scale": {"type": "log", "domain": [100, 60000]}
+      "scale": {"type": "log", "domain": [100,120000]}
     },
     "y": {
-      "field": "SuicideRate_2000",
+      "field": "SuicideRate",
       "type": "quantitative",
       "axis": {"tickCount": 11},
       "title": "Crude Suicide Rate",
@@ -96,8 +108,8 @@
     },
     "tooltip": [
       {"field": "CountryName", "type": "nominal", "title": "Country"},
-      {"field": "GDP_PerCapita_2000 US$", "type": "quantitative", "format": ",", "title": "GDP per Capita"},
-      {"field": "SuicideRate_2000", "type": "quantitative", "format": ",", "title": "Suicide Rate"}
+      {"field": "GDP_PerCapita", "type": "quantitative", "format": ",", "title": "GDP per Capita"},
+      {"field": "SuicideRate", "type": "quantitative", "format": ",", "title": "Suicide Rate"}
     ]
   }
 }

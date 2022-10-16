@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url":"https://raw.githubusercontent.com/harj2002/DataVis2/main/data/AVERAGES.csv"},
+"params": [
+
+    {
+      "name": "Year_selection",
+      "value": 2000,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2020,
+        "step": 5,
+        "name": "Year: "
+      }
+  }
+],
+"transform": [{"filter": "datum.Year == Year_selection"}],
+"hconcat":[{
+  "mark": "bar",
+    "encoding": {
+      "x": {"field": "Continent "},
+      "y": {"field": "average_suicide", "type": "quantitative","title":"Average Suicide Rate"},
+      "color":{"field": "Continent "}
+    }},
+    {
+  "mark": "bar",
+    "encoding": {
+      "x": {"field": "Continent "},
+      "y": {"field": "average_gdp", "type": "quantitative","title":"Average GDP Per Capita"},
+      "color":{"field": "Continent "}
+    }
+    }]
+
+}

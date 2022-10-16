@@ -17,7 +17,7 @@
     },
     {
        "name": "zoom_level",
-            "value": 200,
+            "value": 500,
             "bind": {
                 "input": "range",
                 "min": 200,
@@ -28,7 +28,7 @@
     },
     {
             "name": "center_to",
-            "value": [140,0],
+            "value": [15,50],
             "bind": {
                 "input": "select",
                 "options": [
@@ -97,7 +97,8 @@
     },
     "tooltip": [
       {"field": "CountryName", "type": "nominal", "title": "Country"},
-      {"field": "SuicideRate", "type": "quantitative", "title": "Suicide Rate (Per 100,000)"}
+      {"field": "SuicideRate", "type": "quantitative", "title": "Suicide Rate (Per 100,000)"},
+      {"field": "GDP_PerCapita", "type": "quantitative", "title": "GDP Per Capita","format": ".0f"}
     ]
   },
   "config": {}

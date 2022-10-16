@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "data": {"url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/countryratesvsyear.csv"},
+  "mark": "rect",
+  "encoding": {
+    "y": {"field": "country", "type": "nominal"},
+    "x": {"field": "year", "type": "ordinal"},
+    "color": {"aggregate": "mean", "field": "Suicide mortality rate (per 100,000 population)","legend": {
+      "orient": "top"
+    }}
+  },
+  "tooltip": [
+    {}
+  ],
+  "config": {
+    "axis": {"grid": true, "tickBand": "extent"}
+  }
+}

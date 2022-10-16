@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "500",
-  "height": "500",
+  "width": "container",
   "description": "A horizontal box plot showing median, min, and max body mass of penguins.",
   "data": {"url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/countryratesvsyear.csv"},
   "mark": {"type": "boxplot", "extent": "min-max"},

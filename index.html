@@ -38,7 +38,6 @@
       <div class="pure-u-1-1">
           <h2>Suicide Rates across the Globe</h2>
           <div id="choropleth_map2" class="vis-container"></div>
-          <p>ADD YEAR SLIDER</p>
           <p>Comment on changes over the years</p>
       </div>
     </div>
@@ -47,7 +46,7 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-          <h2>Crude Suicide rates vs GDP per Country (Year 2000)</h2>
+          <h2>Crude Suicide rates vs GDP per Country</h2>
           <div id="scatter_plot" class="vis-container"></div>
           <p>By definition a crude suicide rate is the number of deaths in a year, divided by the population
             and multiplied by 100000. Generally we can see that Africa albeit having a lower average GDP per Capita
@@ -74,16 +73,35 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
+        <div class="pure-u-1-2">
+        <div id="bar_charts" class="vis-container"></div>
+      </div>
       <div class="pure-u-1-2">
-        <div class="description description-left">
+        <div class="description description-right">
           <h2>Looking at specific countries</h2>
           <p>Please select a country from the following drop down menu. There is a country from each continent.
               You are able to compare and see and trends between GDP and suicide rates </p>
         </div>
       </div>
-      <div class="pure-u-1-2">
-        <div id="linegraph" class="vis-container"></div>
-      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    <div id="linegraph" class="vis-container"></div>
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="description description-left">
+              <h2>BOXPLOT</h2>
+              <p>Please select a country from the following drop down menu. There is a country from each continent.
+                  You are able to compare and see and trends between GDP and suicide rates </p>
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="boxplot" class="vis-container"></div>
+        </div>
     </div>
     <!-- end pure grid group -->
 
@@ -97,7 +115,7 @@
             </div>
         </div>
         <div class="pure-u-1-2">
-            <div id="boxplot" class="vis-container"></div>
+            <div id="heatmap" class="vis-container"></div>
         </div>
     </div>
     <!-- end pure grid group -->
@@ -117,6 +135,8 @@
   var spec3 = "js/linegraph_dual_axis.vg.json";
   var spec4 = "js/boxplot.vg.json";
   var spec5 = "js/choropleth_map.vg.json";
+  var spec6 = "js/heatmap.vg.json";
+  var spec7 = "js/bar_charts.vg.json";
 
   vegaEmbed('#scatter_plot', spec1, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -135,6 +155,14 @@
   }).catch(console.error);
 
   vegaEmbed('#choropleth_map', spec5, { "actions": false }).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#heatmap', spec6, { "actions": false }).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#bar_charts', spec7, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
