@@ -104,6 +104,18 @@
   }],
   "config": {
     "background": "#D3D3D3FF",
-    "font": "Oswald"
+    "font": "Oswald",
+    "axis": {
+      "domain": false,
+      "titleFontSize": 14,
+      "labelFontSize": 13
+    },
+    "title": {
+      "fontSize": 16
+    },
+    "legend": {
+      "titleFontSize": 13,
+      "labelFont": 13
+    }
   }
 }

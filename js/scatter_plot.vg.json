@@ -6,7 +6,7 @@
     "text": "Figure 2 : Scatter Plot of Suicide Rates (Per 100,000) vs GDP per Captia, 2000-2020",
     "orient": "bottom",
     "fontWeight":"bold"
-    },
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/pivoted_ratevsgdp_withcontinents.csv"
   },
@@ -119,6 +119,17 @@
   },
   "config": {
     "background": "#D3D3D3FF",
-    "font": "Oswald"
+    "font": "Oswald",
+    "axis": {
+      "domain": false,
+      "titleFontSize": 13
+    },
+    "title": {
+      "fontSize": 15
+    },
+    "legend": {
+      "titleFontSize": 13,
+      "labelFont": 13
+    }
   }
 }

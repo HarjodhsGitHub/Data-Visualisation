@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": 400,
-  "width": 300,
+  "width": 500,
+  "width": 450,
   "title": {
     "text": "Figure 5 : Dual Axis line graph of Suicide vs GDP, 2000-2019",
     "orient": "bottom",
@@ -84,6 +85,18 @@
 
   "config": {
     "background": "#D3D3D3FF",
-    "font": "Oswald"
+    "font": "Oswald",
+    "axis": {
+      "domain": false,
+      "titleFontSize": 14,
+      "labelFontSize": 13
+    },
+    "title": {
+      "fontSize": 16
+    },
+    "legend": {
+      "titleFontSize": 13,
+      "labelFont": 13
+    }
   }
 }

@@ -10,11 +10,15 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-size: 25px;
+  font-size: 32px;
   color: darkred;
     border-bottom: 3px solid darkred;
     width: 100%;
     display: block;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 p {
@@ -22,7 +26,7 @@ p {
 	text-align: left;
 	max-width: 60ch;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 body {
@@ -65,7 +69,6 @@ h1 {
 
 .figure {
 	color: black;
-	font: "Arial";
 	font-weight: bold;
 	font-weight: 500;
 	font-size: 14.4px;

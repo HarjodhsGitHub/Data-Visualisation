@@ -5,7 +5,8 @@
     "orient": "bottom",
     "fontWeight":"bold"
     },
-  "width": "container",
+  "width": "400",
+  "height": "250",
   "data": {"url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/countryratesvsyear.csv"},
   "mark": "rect",
   "encoding": {
@@ -20,6 +21,18 @@
   "config": {
     "axis": {"grid": true, "tickBand": "extent"},
     "background": "#D3D3D3FF",
-    "font": "Oswald"
+    "font": "Oswald",
+    "axis": {
+      "domain": false,
+      "titleFontSize": 14,
+      "labelFontSize": 13
+    },
+    "title": {
+      "fontSize": 16
+    },
+    "legend": {
+      "titleFontSize": 13,
+      "labelFont": 13
+    }
   }
 }

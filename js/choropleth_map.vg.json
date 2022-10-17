@@ -4,8 +4,8 @@
     "text": "Figure 3 : Continental Map of Suicide Rates, 2000-2019",
     "orient": "bottom"
     },
-  "width": 400,
-  "height": 400,
+  "width": 550,
+  "height": 500,
   "params": [
     {
       "name": "Year_selection",
@@ -109,6 +109,18 @@
   "config": {
     "background": "#D3D3D3FF",
     "view": {"stroke": "black"},
-    "font": "Oswald"
+    "font": "Oswald",
+    "axis": {
+      "domain": false,
+      "titleFontSize": 14,
+      "labelFontSize": 13
+    },
+    "title": {
+      "fontSize": 16
+    },
+    "legend": {
+      "titleFontSize": 13,
+      "labelFont": 13
+    }
   }
 }
