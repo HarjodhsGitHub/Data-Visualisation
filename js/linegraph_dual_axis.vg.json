@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "height": 500,
-  "width": 500,
+  "height": 400,
+  "width": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/countryratesvsyear.csv"
   },
@@ -67,12 +67,17 @@
         "condition": {
           "test": "Country_selection != null",
           "datum": {"repeat": "layer"},
-          "type": "nominal"
+          "type": "nominal",
+          "legend": {"orient": "top"}
         }
       },
       "y": {"field": {"repeat": "layer"}, "type": "quantitative"},
       "tooltip": [{"field": {"repeat": "layer"}, "type": "quantitative"}]
     }
   },
-  "resolve": {"scale": {"y": "independent"}}
+  "resolve": {"scale": {"y": "independent"}},
+
+  "config": {
+    "background": "#D3D3D3FF"
+  }
 }

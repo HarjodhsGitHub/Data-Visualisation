@@ -4,16 +4,17 @@
   "data": {"url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/countryratesvsyear.csv"},
   "mark": "rect",
   "encoding": {
-    "y": {"field": "country", "type": "nominal"},
-    "x": {"field": "year", "type": "ordinal"},
+    "y": {"field": "country", "type": "nominal","title": "Country"},
+    "x": {"field": "year", "type": "ordinal","title": "Year"},
     "color": {"aggregate": "mean", "field": "Suicide mortality rate (per 100,000 population)","legend": {
-      "orient": "top"
+      "orient": "bottom"
     }}
   },
   "tooltip": [
-    {}
+    {"field": "Suicide mortality rate (per 100,000 population)"}
   ],
   "config": {
-    "axis": {"grid": true, "tickBand": "extent"}
+    "axis": {"grid": true, "tickBand": "extent"},
+    "background": "#D3D3D3FF"
   }
 }

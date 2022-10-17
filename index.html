@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -21,85 +25,133 @@
 
 </head>
 <body>
-<title>Data Vis 2</title>
 <div class="page">
+<title>Data Vis 2</title>
+    <h1>Suicide Rates and their Correlation with GDP</h1>
+    <h3>Data Visualisation 2 - FIT3139 - Harjodh Singh</h3>
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1>Suicide Rates and their Correlation with GDP</h1>
-        <p>Data Visualisation 2 - Harjodh Singh</p>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-          <h2>Suicide Rates across the Globe</h2>
-          <div id="choropleth_map2" class="vis-container"></div>
-          <p>Comment on changes over the years</p>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-          <h2>Crude Suicide rates vs GDP per Country</h2>
-          <div id="scatter_plot" class="vis-container"></div>
-          <p>By definition a crude suicide rate is the number of deaths in a year, divided by the population
-            and multiplied by 100000. Generally we can see that Africa albeit having a lower average GDP per Capita
-            their suicide rates are in the lower half. Europe with a higher GDP per Capita however has higher suicide
-            rates.</p>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
+        <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-2">
+            <p style="text-align:left">In modern and more open society, mental health and suicide has
+                been brought under the light and talked about more, its awareness has risen greatly.</p>
+        </div>
+        <div class="pure-u-1-2">
+            <p style="text-align:left">This visualistaion will look Suicide rates in each country
+                and its relationship to GDP and see if there is any correlation between the two.</p>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    <h2>Global Perspective</h2>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+          <h3>Suicide Rates Global Map</h3>
+          <div id="choropleth_map2" class="vis-container"></div>
+          <p>The map represents the suicide rates of each country over the years, the data has been
+          normalised for a suicide per 100,000 people. This shows the changes over the past of different
+          countries.<br></br>Note : The slider can be used the filter over the years.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+    <br></br>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+          <h3>Suicide Rates vs GDP Scatter Plot</h3>
+          <div id="scatter_plot" class="vis-container"></div>
+          <p>From this scatter plot we can generally we can see that Africa albeit having a lower average GDP per Capita
+            their suicide rates are in the lower half. Europe with a higher GDP per Capita however has higher suicide
+            rates. However, it should be taken into account that less economically developed countries do not collect as
+          much data on areas such as suicide and mental health.<br></br> Note: The drop-down menu can be used to select
+          which Continent is shown. The slider can be used as a filter for years</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <h2>Continental Perspective</h2>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-right">
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+          <p>This map is more conentrated, showing the suicide rates (per 100,000) in more detail
+          of each continent<br></br>Note: The sliders can be used to filter through the years and control
+          the level of zoom, the drop-down menu can be used to choose which Continent is shown.</p>
+        </div>
+      </div>
+        <div class="pure-u-1-2">
+            <h3>Suicide Rates Continental Map</h3>
         <div id="choropleth_map" class="vis-container"></div>
       </div>
+    </div>
+    <!-- end pure grid group -->
+    <br></br>
+    <br></br>
+    <!-- pure grid group -->
+    <div class="pure-g">
       <div class="pure-u-1-2">
-        <div class="description description-right">
-          <h2>Looking at specific countries</h2>
-          <p>Please select a country from the following drop down menu. There is a country from each continent.
-              You are able to compare and see and trends between GDP and suicide rates </p>
+        <div class="description-left">
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+          <p>For each Continent we can see both the average suicide rates (per 100,000) and
+          the GDP (per Captia)<br></br>Note : The slider can be used the filter over the years.</p>
         </div>
+      </div>
+          <div class="pure-u-1-2">
+              <h3>Average GDP and Suicide Rates</h3>
+        <div id="bar_charts" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
+    <br></br>
+    <h2>Countries Perspective</h2>
 
     <!-- pure grid group -->
     <div class="pure-g">
+
         <div class="pure-u-1-2">
-        <div id="bar_charts" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-2">
-        <div class="description description-right">
-          <h2>Looking at specific countries</h2>
-          <p>Please select a country from the following drop down menu. There is a country from each continent.
-              You are able to compare and see and trends between GDP and suicide rates </p>
+            <h3>Suicide Rates vs GDP, 2000-2019</h3>
+            <div id="linegraph" class="vis-container"></div>
         </div>
-      </div>
+        <div class="pure-u-1-2">
+            <div class="description description-right">
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+              <p>There is a country from each continent. You are able to compare and see and trends between GDP and
+                  suicide rates over the years to see how they effect each other.<br></br>Note : Select a country from the drop-down to display</p>
+            </div>
+        </div>
     </div>
     <!-- end pure grid group -->
-
-
-    <div id="linegraph" class="vis-container"></div>
-
 
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-2">
             <div class="description description-left">
-              <h2>BOXPLOT</h2>
-              <p>Please select a country from the following drop down menu. There is a country from each continent.
-                  You are able to compare and see and trends between GDP and suicide rates </p>
+            <br></br>
+            <br></br>
+            <br></br>
+              <p>This graph shows the spread of suicide rates (per 100,000) over the years in
+              different countries, allowing us to compare their data.</p>
             </div>
         </div>
         <div class="pure-u-1-2">
+            <h3>Spread of Suicide Rates, 2000-2019</h3>
             <div id="boxplot" class="vis-container"></div>
         </div>
     </div>
@@ -108,14 +160,37 @@
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-2">
+            <h3></h3>
+            <div id="heatmap" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <br></br>
+            <br></br>
+            <br></br>
+            <div class="description description-right">
+              <p>We can clearly see that there is not much of a change over the years in each country
+              over the years. The general rate stays the same regardless of GDP.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-2">
             <div class="description description-left">
-              <h2>BOXPLOT</h2>
-              <p>Please select a country from the following drop down menu. There is a country from each continent.
-                  You are able to compare and see and trends between GDP and suicide rates </p>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+              <p>This highlights the specific countries, comparing them to other each other. We can see
+              that the suicide rate does not differ that much between the change of GDP.</p>
             </div>
         </div>
         <div class="pure-u-1-2">
-            <div id="heatmap" class="vis-container"></div>
+            <h3>Spread of Suicide Rates, 2000-2019</h3>
+            <div id="basic_scatterplot" class="vis-container"></div>
         </div>
     </div>
     <!-- end pure grid group -->
@@ -137,6 +212,7 @@
   var spec5 = "js/choropleth_map.vg.json";
   var spec6 = "js/heatmap.vg.json";
   var spec7 = "js/bar_charts.vg.json";
+  var spec8 = "js/basic_scatterplot.vg.json";
 
   vegaEmbed('#scatter_plot', spec1, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -163,6 +239,10 @@
   }).catch(console.error);
 
   vegaEmbed('#bar_charts', spec7, { "actions": false }).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#basic_scatterplot', spec8, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>

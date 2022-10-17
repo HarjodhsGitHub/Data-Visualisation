@@ -11,5 +11,9 @@
       "type": "quantitative",
       "scale": {"zero": false}
     }
+  },
+
+  "config": {
+    "background": "#D3D3D3FF"
   }
 }

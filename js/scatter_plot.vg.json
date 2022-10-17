@@ -2,7 +2,12 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 600,
-  "title": "Suicide vs GDP",
+  "title": {
+    "text": "Figure 2 : Scatter Plot of Suicide Rates (Per 100,000) vs GDP per Captia, 2000-2020",
+    "orient": "bottom",
+    "font":"Arial",
+    "fontWeight":"bold"
+    },
   "data": {
     "url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/pivoted_ratevsgdp_withcontinents.csv"
   },
@@ -69,7 +74,7 @@
       "type": "quantitative",
       "axis": {"tickCount": 11},
       "title": "Crude Suicide Rate",
-      "scale": {"type": "log", "domain": [1.5, 60]}
+      "scale": {"type": "log", "domain": [0.5, 60]}
     },
     "color": {
       "field": "Continent",
@@ -111,5 +116,8 @@
       {"field": "GDP_PerCapita", "type": "quantitative", "format": ",", "title": "GDP per Capita"},
       {"field": "SuicideRate", "type": "quantitative", "format": ",", "title": "Suicide Rate"}
     ]
+  },
+  "config": {
+    "background": "#D3D3D3FF"
   }
 }
