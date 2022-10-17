@@ -2,8 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Figure 1 : Global Map of Suicide Rates (Per 100,000), 2000-2019",
-    "orient": "bottom",
-    "fontSize": {"value": 15}
+    "orient": "bottom"
   },
   "width": 800,
   "height": 400,
@@ -80,6 +79,18 @@
   "config": {
     "background": "#D3D3D3FF",
     "view": {"stroke": "black"},
-    "font": "Oswald"
+    "font": "Oswald",
+    "axis": {
+      "domain": false,
+      "titleFontSize": 14,
+      "labelFontSize": 13
+    },
+    "title": {
+      "fontSize": 16
+    },
+    "legend": {
+      "titleFontSize": 13,
+      "labelFont": 13
+    }
   }
 }
