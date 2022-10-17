@@ -77,7 +77,7 @@
         }
       },
       "y": {"field": {"repeat": "layer"}, "type": "quantitative"},
-      "tooltip": [{"field": {"repeat": "layer"}, "type": "quantitative"}]
+      "tooltip": [{"field": {"repeat": "layer"}, "type": "quantitative","format": ",.2r"}]
     }
   },
   "resolve": {"scale": {"y": "independent"}},

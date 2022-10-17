@@ -62,7 +62,7 @@
     },
     "tooltip": [
       {"field": "CountryName", "type": "nominal", "title": "Country"},
-      {"field": "GDP_PerCapita_2000 US$", "type": "quantitative", "format": ",", "title": "GDP per Capita"},
+      {"field": "GDP_PerCapita_2000 US$", "type": "quantitative", "format": ",.2r", "title": "GDP per Capita"},
       {"field": "SuicideRate_2000", "type": "quantitative", "format": ",", "title": "Suicide Rate"}
     ]
   }

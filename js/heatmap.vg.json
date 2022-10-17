@@ -13,11 +13,10 @@
     "x": {"field": "year", "type": "ordinal","title": "Year"},
     "color": {"aggregate": "mean", "field": "Suicide mortality rate (per 100,000 population)","legend": {
       "orient": "bottom"
-    }}
+    }},"tooltip": [
+    {"aggregate": "mean","field": "Suicide mortality rate (per 100,000 population)","format": ".2f"}
+  ]
   },
-  "tooltip": [
-    {"field": "Suicide mortality rate (per 100,000 population)"}
-  ],
   "config": {
     "axis": {"grid": true, "tickBand": "extent"},
     "background": "#D3D3D3FF"

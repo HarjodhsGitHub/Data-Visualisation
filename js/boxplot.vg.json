@@ -15,7 +15,12 @@
       "field": "Suicide mortality rate (per 100,000 population)",
       "type": "quantitative",
       "scale": {"zero": false}
+    },
+    "tooltip": [{
+      "field": "Suicide mortality rate (per 100,000 population)",
+      "type": "quantitative","format": ".2f"
     }
+    ]
   },
 
   "config": {
