@@ -103,6 +103,7 @@
     }
   }],
   "config": {
-    "background": "#D3D3D3FF"
+    "background": "#D3D3D3FF",
+    "font": "Oswald"
   }
 }

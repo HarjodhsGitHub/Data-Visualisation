@@ -72,7 +72,7 @@
       "field": "SuicideRate",
       "type": "quantitative",
       "axis": {"tickCount": 11},
-      "title": "Crude Suicide Rate",
+      "title": "Suicide Rate (per 100,000)",
       "scale": {"type": "log", "domain": [0.5, 60]}
     },
     "color": {
@@ -104,6 +104,7 @@
           "#ffff33"
         ]
       },
+      "legend": {"orient": "top"},
       "opacity": {"value": 0.6}
     },
     "opacity": {
@@ -117,6 +118,7 @@
     ]
   },
   "config": {
-    "background": "#D3D3D3FF"
+    "background": "#D3D3D3FF",
+    "font": "Oswald"
   }
 }
