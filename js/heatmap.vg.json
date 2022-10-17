@@ -1,5 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Figure 7 : Heat Map, 2000-2019",
+    "orient": "bottom",
+    "fontWeight":"bold"
+    },
   "width": "container",
   "data": {"url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/countryratesvsyear.csv"},
   "mark": "rect",

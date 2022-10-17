@@ -2,6 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 400,
   "height": 400,
+  "title": {
+    "text": "Figure 4 : Bar Chart of Continent Averages, 2000-2020",
+    "orient": "bottom",
+    "fontWeight":"bold"
+    },
   "data": {"url":"https://raw.githubusercontent.com/harj2002/DataVis2/main/data/AVERAGES.csv"},
 "params": [
 
@@ -24,8 +29,10 @@
       "y": {"field": "Continent "},
       "x": {"field": "average_suicide", "type": "quantitative","title":"Average Suicide Rate"},
       "color":{"field": "Continent ",
-      "legend": {"orient":  "top"}}
+      "legend": null},
+      "tooltip": [{"field": "average_suicide"},{}]
     }},
+
     {
   "mark": "bar",
     "encoding": {
@@ -34,7 +41,6 @@
       "color":{"field": "Continent "}
     }
     }],
-
 
   "config": {
     "background": "#D3D3D3FF"

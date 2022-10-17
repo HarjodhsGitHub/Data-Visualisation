@@ -3,7 +3,7 @@
   "width": 600,
   "height": 400,
   "title": {
-    "text": "Figure 2 : Scatter Plot of Suicide Rates (Per 100,000) vs GDP per Captia, 2000-2020",
+    "text": "Figure 8 : Scatter Plot of Suicide Rates (Per 100,000) vs GDP per Captia, 2000-2020",
     "orient": "bottom",
     "font":"Arial",
     "fontWeight":"bold"

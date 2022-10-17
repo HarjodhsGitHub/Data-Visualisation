@@ -1,5 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Figure 6 : Box plot of Suicide vs GDP, 2000-2019",
+    "orient": "bottom",
+    "fontWeight":"bold"
+    },
   "width": "container",
   "description": "A horizontal box plot showing median, min, and max body mass of penguins.",
   "data": {"url": "https://raw.githubusercontent.com/harj2002/DataVis2/main/data/countryratesvsyear.csv"},

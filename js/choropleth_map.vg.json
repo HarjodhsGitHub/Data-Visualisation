@@ -64,7 +64,7 @@
       ],
       "mark": {
         "type": "geoshape",
-        "fill": "#ddd",
+        "fill": "#EEE",
         "stroke": "black",
         "strokeWidth": 1
       },
